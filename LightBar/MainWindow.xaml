@@ -1,0 +1,22 @@
+﻿<Window x:Class="LightBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LightBar"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="325">
+    <Grid>
+        <StackPanel Margin="10">
+            <local:LightBarControl x:Name="lightBar" MinHeight="200" MinWidth="100"/>
+            <Button Content="Do it..." Click="Button_Click"/>
+            <TextBlock>Last Elapsed Time:</TextBlock>
+            <TextBlock Name="elapsed"/>
+            <TextBlock>iterations:</TextBlock>
+            <TextBlock Name="iterations"/>
+            <TextBlock>Delay:</TextBlock>
+            <TextBlock Name="delay"/>
+        </StackPanel>
+    </Grid>
+</Window>
